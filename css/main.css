@@ -1,9 +1,21 @@
 @charset "UTF-8";
 a {
     text-decoration: none;
+    color: black;
 }
 li {
     list-style: none;
+}
+
+
+.desktop_nav
+{
+    display: none;
+}
+
+.account img
+{
+    max-width: 1.5rem;
 }
 
 
@@ -19,6 +31,55 @@ li {
 @media screen and (min-width: 460px)
 {
 
+    .mobile_nav
+    {
+        width: 100%;
+    }
+
+    .mobile_nav ul li a img
+    {
+        width: 90%;
+    }
+
+    .mobile_nav ul li a:first-child
+    {
+        width: 60%;
+        float: left;
+        padding-top: 0.5%;
+    }
+    .burger
+    {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 10px;
+    }
+    .burger img {
+        width: 2.5rem;
+    }
+
+    .account
+    {
+        width: 30%;
+        float: left;
+    }
+
+    .account img
+    {
+        padding: 0 7%;
+    }
+
+    .block
+    {
+        width: 40%;
+        float: left;
+        text-align: right;
+    }
+
+    .link_desktop
+    {
+        display: none;
+    }
 }
 
 
@@ -29,35 +90,39 @@ li {
             NAV_BAR_DESKTOP
      */
 
-    #desktop_nav
-    {
 
+    .mobile_nav ul li img
+    {
+        width: 20em;
     }
 
-    .desktop_nav ul li a
+    .mobile_nav ul li a:first-child
     {
         width: 20%;
+    }
 
+    .link_desktop li a:first-child
+    {
+        width: 20%;
+    }
+
+    .link_desktop
+    {
         display: block;
-        float: left;
-
         text-align: center;
         font-family: Oswald, sans-serif;
-        padding-top: 0.5%;
     }
 
-    .desktop_nav li a img {
-        width: 100%;
-    }
-
-
-    .account a img
+    .account
     {
-        max-width: 1.5em;
-        padding: 0 2%;
+        width: 10%;
+        margin-left: 11%;
+
     }
-
-
+    .burger img
+    {
+        display: none;
+    }
 
 
 }
