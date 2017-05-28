@@ -503,5 +503,43 @@ fieldset {
         display: none;
     }
 
+    /*
+        NAV_BAR_DESKTOP
+ */
+
+
+    .mobile_nav ul li img
+    {
+        width: 20em;
+    }
+
+    .mobile_nav ul li a:first-child
+    {
+        width: 20%;
+    }
+
+    .link_desktop li a:first-child
+    {
+        width: 20%;
+    }
+
+    .link_desktop
+    {
+        display: block;
+        text-align: center;
+        font-family: Oswald, sans-serif;
+    }
+
+    .account
+    {
+        width: 10%;
+        margin-left: 11%;
+
+    }
+    .burger img
+    {
+        display: none;
+    }
+
 
 }
