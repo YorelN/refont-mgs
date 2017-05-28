@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Article : test</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<main>
+    <!-- Section banniere image categories tee-shirt et maillots de bain -->
+    <section class="banniere_categorie">
+        <figure>
+            <img src="img-content/categories/maillot.jpg" alt="categorie maillot de bain t shirt">
+        </figure>
+        <h2>Tee-shirt et maillots de bain</h2>
+    </section>
+    <!-- fin de section banniere -->
+
+    <!--Section article-->
+    <section class="article_single">
+        <!--Partie de gauche, carousel d'image-->
+        <div class="article_carousel">
+            <figure>
+                <img src="img-content/nautique/combinaison-homme.jpg" alt="combinaison nautique homme oneill">
+            </figure>
+            <div class="images_carousel">
+                <img src="img-content/nautique/combinaison-homme.jpg" alt="combinaison nautique homme oneill">
+                <img src="img-content/nautique/combinaison-homme-cote.jpg" alt="combinaison homme cote oneill">
+                <img src="img-content/nautique/combinaison-homme-dos.jpg" alt="combinaison dos homme noire oneill">
+            </div>
+        </div>
+
+        <!--Partie droite, informations article-->
+        <div class="article_informations">
+            <h2><span>O'neill</span> - Noir</h2>
+
+            <h1>Combinaison néoprène O'Neill S15 Mens 3Mm Reactor (Black) - Noir</h1>
+
+            <p class="article_prix">96.74€</p>
+
+            <form action="" class="article_commande">
+                <fieldset class="taille clearfix">
+                    <div class="select">
+                        <select name="taille" id="taille">
+                            <option selected disabled>Taille</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <span class="icon-down-arrow"></span>
+                    </div>
+
+                    <button>Guide Des Tailles</button>
+                    <p>*NB: Les tailles listées ci-dessus sont anglaises (UK)</p>
+                </fieldset>
+                <fieldset class="quantite">
+                    <label for="quantite">Quantité :</label>
+                    <div>
+                        <span class="plus">+</span>
+                        <input type="number" id="quantite" value="1">
+                        <span class="moins">-</span>
+                    </div>
+                </fieldset>
+                <input type="submit" value="Ajouter au panier">
+            </form>
+            <p class="code"><span>Code du produit</span> : 237291</p>
+        </div>
+    </section>
+</main>
+
+<script type="text/javascript">
+    var images = document.querySelectorAll('.images_carousel img');
+    var image_principale = document.querySelector('.article_carousel img');
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener('click', function() {
+            if (image_principale.src !== this.src) {
+                image_principale.src = this.src;
+            }
+        });
+    }
+
+    // quantite plus/moins
+    var plus = document.querySelector('.plus');
+    var moins = document.querySelector('.moins');
+    var quantite = document.querySelector('input[type="number"]');
+
+    plus.addEventListener('click', function() {
+        quantite.value = parseInt(quantite.value) + 1;
+    });
+
+    moins.addEventListener('click', function() {
+        if (parseInt(quantite.value) > 0) {
+            quantite.value = parseInt(quantite.value) - 1;
+        }
+    });
+</script>
+</body>
+</html>
