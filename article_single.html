@@ -5,18 +5,58 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Article : test</title>
+    <title>Article : Combinaison O'NEILL</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<header>
+    <nav class="mobile_nav clearfix">
+        <ul class="clearfix">
+            <li class="logo">
+                <a href="index.html">
+                    <img src="img-layout/logo.svg" alt="mister good surf logo">
+                </a>
+            </li>
+            <li class="link_desktop">
+                <ul class="clearfix">
+                    <li>
+                        <a href="article_listing.html">Sports nautiques</a>
+                    </li>
+
+                    <li>
+                        <a href="article_listing.html">Tee-shirt et maillots de bain</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Nous contacter</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="account">
+            <a href="">
+                <img src="img-layout/compte.svg" alt="compte account picto">
+            </a>
+            <a href="panier.html">
+                <img src="img-layout/panier.svg" alt="picto panier commander">
+            </a>
+        </div>
+        <div class="burger">
+            &#9776;
+        </div>
+    </nav>
+</header>
 <main>
     <!-- Section banniere image categories tee-shirt et maillots de bain -->
     <section class="banniere_categorie">
-        <figure>
-            <img src="img-content/categories/maillot.jpg" alt="categorie maillot de bain t shirt">
-        </figure>
-        <h2>Tee-shirt et maillots de bain</h2>
+        <a href="article_listing.html">
+            <figure>
+                <img src="img-content/categories/maillot.jpg" alt="categorie maillot de bain t shirt">
+            </figure>
+            <h2>Tee-shirt et maillots de bain</h2>
+        </a>
     </section>
     <!-- fin de section banniere -->
 
@@ -42,7 +82,7 @@
 
             <p class="article_prix">96.74€</p>
 
-            <form action="" class="article_commande">
+            <form action="panier.html" class="article_commande">
                 <fieldset class="taille clearfix">
                     <div class="select">
                         <select name="taille" id="taille">
@@ -72,6 +112,39 @@
         </div>
     </section>
 </main>
+
+<footer>
+    <div class="footer_container clearfix">
+        <article class="footer_block">
+            <h3>Horraires : </h3>
+            <p>Lundi : 15h00 - 19h00</p>
+            <p>Mardi - Samedi : 10h00 - 19h00</p>
+        </article>
+        <article class="footer_block">
+            <h3>Adresse : </h3>
+            <p>10 Bas du Fort, centre escale</p>
+            <p>97190 Le Gosier Guadeloupe</p>
+        </article>
+        <article class="footer_block">
+            <h3>À propos </h3>
+            <p>0590 93 62 71</p>
+            <p>Mail : mgs@hotmail.com</p>
+        </article>
+    </div>
+
+    <div class="paiment clearfix">
+        <div><img src="img-content/payment/american-express.png" height="41" width="65" alt="moyen de paiement"/></div>
+        <div><img src="img-content/payment/mastercard.png" height="41" width="65" alt="moyen de paiement"/></div>
+        <div><img src="img-content/payment/paypal.png" height="41" width="65" alt="moyen de paiement"/></div>
+        <div><img src="img-content/payment/visa.png" height="41" width="65" alt="moyen de paiement visa"/></div>
+    </div>
+
+    <div class="juridique">
+        <p>Cookies</p>
+        <p>Tous droit résèrvé - Mister Good SurfMGS, 2017</p>
+        <p>Politique de confidentialité</p>
+    </div>
+</footer>
 
 <script type="text/javascript">
     var images = document.querySelectorAll('.images_carousel img');
