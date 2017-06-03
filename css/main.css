@@ -40,7 +40,7 @@ html {
 }
 
 main {
-    width: 95%;
+    width: 90%;
     max-width: 122rem;
     margin: 0 auto;
 }
@@ -93,27 +93,145 @@ fieldset {
 .icon-icon:before {
     content: "\e902";
 }
-.icon-wifi:before {
-    content: "\e903";
-}
-.icon-swimming-silhouette:before {
-    content: "\e904";
-}
-.icon-parking-sign:before {
-    content: "\e905";
-}
-.icon-plate-fork-and-knife:before {
-    content: "\e906";
+
+/* -- Header -- */
+
+header nav
+{
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem 2%;
 }
 
+header nav > ul
+{
+    display: inline-block;
+    margin-right: 10%;
+    width: 50%;
+}
+
+.logo
+{
+    /*max-width: 13.5rem;*/
+    width: 95%;
+    display: inline-block;
+}
+
+.logo img
+{
+    display: block;
+    max-width: 100%;
+}
+
+.link_desktop
+{
+    display: none;
+}
+
+.account
+{
+    display: inline-block;
+}
+
+.account img
+{
+    width: 2rem;
+}
+
+.account a:first-child
+{
+    margin-right: 2rem;
+}
+
+.account a:last-child img
+{
+    width: 1.8rem;
+}
+
+.burger
+{
+    position: absolute;
+    top: .5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+}
+
+ /*-- Accueil -- */
+/*
+    HOME
+ */
+
+.categorie img
+{
+    max-width: 100%;
+}
+
+
+.list_categorie
+{
+    width: 100%;
+}
+
+.list_categorie a
+{
+    color: white;
+}
+
+.categorie
+{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+}
+
+.categorie h2
+{
+    position: absolute;
+    width: 50%;
+    height: 30vh;
+    top: 44%;
+    left: 28%;
+    z-index: 42;
+}
 
 
 /* -- Page Article Single -- */
 
+/*Banniere*/
+
 .banniere_categorie
 {
-    display: none;
+    position: relative;
 }
+
+.banniere_categorie img
+{
+    display: block;
+    width: 100%;
+}
+
+.banniere_categorie h2
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 30%;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    background: rgba(0,0,0,.4);
+}
+
+
+/*Informations articles / carousel*/
 
 .article_single
 {
@@ -127,7 +245,7 @@ fieldset {
 
 .images_carousel img {
     max-width: 30%;
-    max-height: 12rem;
+    max-height: 8rem;
     border: .1rem solid rgba(0,0,0,.2);
     cursor: pointer;
 }
@@ -185,9 +303,9 @@ fieldset {
 {
     position: relative;
     display: inline-block;
-    width: 12rem;
+    width: 50%;
     padding: .2rem 2rem .2rem 1rem;
-    float: left;
+    margin-bottom: 2rem;
     overflow: hidden;
     border: .1rem solid rgba(21,105,189,0.2);
     box-shadow: 1px 1px 7px 0 rgba(0,0,0,0.1);
@@ -197,9 +315,9 @@ fieldset {
 .select .icon-down-arrow
 {
     position: absolute;
-    top:.5rem;
-    right: .5rem;
-    font-size: 1.8rem;
+    top:1rem;
+    right: 2rem;
+    font-size: 2rem;
     color: #1569BD;
 }
 
@@ -218,7 +336,6 @@ fieldset {
 
 .taille button
 {
-    float: right;
     padding: .6rem 2rem;
     background: none;
     border: none;
@@ -251,7 +368,7 @@ fieldset {
 .quantite input
 {
     max-width: 12rem;
-    padding: 1rem 0;
+    padding: 1rem 0 1rem 1rem;
     text-align: center;
     font-size: 1.4rem
 }
@@ -293,71 +410,726 @@ fieldset {
     font-size: 1.6rem;
 }
 
+/*-- Listing Article -- */
 
-
-
-
-@media screen and (min-width: 460px)
+.fil_ariane
 {
-    .images_carousel img
-    {
-        max-height: 15rem;
-    }
+    margin-top: 2rem;
+}
 
-    .mobile_nav
-    {
-        width: 100%;
-    }
+.fil_ariane li
+{
+    display: inline-block;
+}
 
-    .mobile_nav ul li a img
-    {
-        width: 90%;
-    }
+.fil_ariane a
+{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
 
-    .mobile_nav ul li a:first-child
+.fil_ariane li:last-child a
+{
+    color: #1569BD;
+}
+
+.fil_ariane li:after
+{
+    content: '>';
+    margin: 0 .5rem;
+}
+
+.fil_ariane li:last-child:after
+{
+    content: '';
+}
+
+.filtres .select
+{
+    display: block;
+    margin: 2rem auto;
+    padding: .5rem 2rem .2rem 1.5rem;
+}
+
+.filtres select
+{
+    font: 300 1.6rem Oswald, 'sans-serif';
+    color: #1569BD;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    width: 20rem;
+    letter-spacing: .1rem;
+}
+
+.filtres .select .icon-down-arrow
+{
+    /*top: .1rem;*/
+}
+
+.liste_articles figure
+{
+    width: 80%;
+    margin: 0 auto 2rem;
+}
+
+.liste_articles img
+{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.liste_articles h3,
+.liste_articles .prix
+{
+    float: left;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-size: 1.6rem;
+}
+
+.liste_articles h2
+{
+    clear: both;;
+    line-height: 150%;
+    color: #1569BD;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.liste_articles .prix
+{
+    float: right;
+}
+
+.liste_articles h2
+{
+    clear: both;
+}
+
+.liste_articles article
+{
+    margin: 4rem 0;
+    padding: 1.5rem 1.5rem 2rem;
+    border: 1px solid rgba(21,105,189,0.2);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+}
+
+ /*-- PANIER -- */
+
+.panier_title
+{
+    margin-bottom: 4rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    text-align: center;
+    color: #1569BD;
+}
+
+.panier_liste article
+{
+    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px dashed rgba(0,0,0,0.3);
+}
+
+.panier_liste h2
+{
+    margin-bottom: 5rem;
+    font: 400 1.9rem Oswald, 'sans-serif';
+    letter-spacing: .1rem;
+}
+
+.panier_liste figure
+{
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.article_contenu
+{
+    width: 48%;
+    display: inline-block;
+}
+
+.article_contenu h3
+{
+    margin-bottom: 1rem;
+    font: 700 1.8rem Oswald, 'sans-serif';
+    letter-spacing: .1rem;
+}
+
+.article_description
+{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    color: #1569BD;
+}
+
+.article_contenu .prix
+{
+    font: 700 2rem Oswald, 'sans-serif';
+    margin-bottom: 2.5rem;
+}
+
+.article_contenu .quantite
+{
+    /*width: 7rem;*/
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.article_contenu .quantite div
+{
+    margin: 0;
+}
+
+.article_contenu .quantite input
+{
+    max-width: 10rem;
+}
+
+.article_contenu .quantite span
+{
+    font-size: 2.2rem;
+    height: 100%;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+.article_contenu .moins
+{
+    left: 0;
+}
+
+.article_contenu .plus
+{
+    right: 0;
+}
+
+.article_contenu button
+{
+    margin-bottom: 2.5rem;
+    padding-left: 2rem;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    color: rgba(0,0,0,.5);
+}
+
+.continue
+{
+    display: block;
+    width: 80%;
+    max-width: 40rem;
+    margin: 4rem auto;
+    padding: .5rem 0;
+    font: 300 2rem Oswald, 'sans-serif';
+    letter-spacing: .1rem;
+    border: .1rem solid rgba(0,0,0,0.2);
+    box-shadow: .1rem .1rem .7rem .1rem rgba(0,0,0,0.1);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.panier_liste img,
+.cross_selling img
+{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.total
+{
+    max-width: 40rem;
+    margin: 0 auto 3.6rem;
+    padding: 3rem 2rem;
+    border: .4rem solid rgba(0,0,0,0.1);
+}
+
+.total li {
+    display: inline-block;
+    float: left;
+    width: 70%;
+    font-size: 1.6rem;
+}
+
+.total li:first-child,
+.total li:nth-child(2)
+{
+    margin-bottom: 2rem;
+}
+
+.total li:nth-child(even)
+{
+    float: right;
+    width: 30%;
+    text-align: right;
+}
+
+.button_commande
+{
+    display: block;
+    width: 90%;
+    max-width: 40rem;
+    margin: 0 auto 5rem;
+    padding: 1rem 0;
+    border: .1rem solid #4A90E2;
+    box-shadow: .1rem .2rem .8rem .1rem rgba(0,0,0,0.1);
+    color: #1569BD;
+    text-align: center;
+}
+
+.button_commande img,
+.button_commande span
+{
+    display: inline-block;
+}
+
+.button_commande img
+{
+    margin-right: 1rem;
+    width: 1.6rem;
+    height: auto;
+}
+
+.button_commande span
+{
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+/*section cross selling*/
+
+.cross_selling
+{
+    padding: 1rem 1.5rem;
+    border-top: .2rem solid rgba(0,0,0,.2);
+}
+
+.cross_selling h4
+{
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+}
+
+.cross_selling_liste
+{
+    position: relative;
+}
+
+.cross_selling_liste article
+{
+    display: none;
+    text-align: center;
+}
+
+.cross_selling_liste figure
+{
+    width: 80%;
+    margin: 0 auto 1rem;
+}
+
+.cross_selling_liste h5
+{
+    font: 700 1.8rem Oswald, 'sans-serif';
+}
+
+.cross_selling_liste p
+{
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    color: #1569BD;
+}
+
+.cross_selling_liste .prix
+{
+    margin: 0;
+    font: 700 2rem Oswald, 'sans-serif';
+    color: #000;
+}
+
+.cross_selling_liste .article_visible
+{
+    display: block;
+}
+
+.buttons_carousel
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding-top: 50%;
+}
+
+.buttons_carousel i
+{
+    font-size: 3.5rem;
+    cursor: pointer;
+    transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #1569BD;
+}
+
+.prev
+{
+    float: left;
+}
+
+.buttons_carousel .next
+{
+    float: right;
+    transform: rotate(-90deg);
+}
+
+ /*-- footer -- */
+
+.footer_container
+{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+footer
+{
+    background: #ededed;
+    font-family: Oswald, sans-serif;
+}
+
+.footer_block
+{
+    width: 90%;
+    margin: 2% auto;
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 26px;
+}
+
+
+.paiment
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3% 1%;
+}
+
+.paiment div
+{
+    text-align: right;
+
+    width: 25%;
+    margin: 0 auto;
+    float: left;
+}
+
+.juridique
+{
+    background: #d6d6d6;
+    width: 100%;
+    text-align: center;
+    padding: 4% 0 4% 0;
+    height: 200px;
+
+
+}
+
+.juridique p
+{
+    font-size: 1.5em;
+    font-family: Oswald, sans-serif;
+    width: 33%;
+    margin: 4% auto;
+}
+
+@media screen and (min-width: 460px) {
+
+     /*-- Navbar Tablette -- */
+
+    header nav > ul
     {
-        width: 60%;
-        float: left;
-        padding-top: 0.5%;
-    }
-    .burger
-    {
-        position: absolute;
-        top: 20px;
-        right: 40px;
-        font-size: 10px;
-    }
-    .burger img {
-        width: 2.5rem;
+        margin-right: 0;
     }
 
     .account
     {
-        width: 30%;
-        float: left;
+        float: right;
+        margin-right: 7rem;
     }
 
     .account img
     {
-        padding: 0 7%;
+        width: 2.4rem;
     }
 
-    .block
+    .account a:first-child
     {
-        width: 40%;
+        margin-right: 5rem;
+    }
+
+    .account a:last-child img
+    {
+        width: 2.1rem;
+    }
+
+    .burger
+    {
+        top: .8rem;
+        font-size: 3.1rem;
+    }
+
+     /*-- Accueil Tablette -- */
+
+    .categorie img
+    {
+        max-width: 100%;
+    }
+
+
+    .list_categorie
+    {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .list_categorie a
+    {
+        color: white;
+    }
+
+    .categorie
+    {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        font-family: Oswald, sans-serif;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .categorie h2
+    {
+        position: absolute;
+        width: 50%;
+        height: 30vh;
+        top: 44%;
+        left: 28%;
+    }
+
+     /*Article Single*/
+    .images_carousel img {
+        max-height: 16rem;
+    }
+
+    .banniere_categorie {
+        display: none;
+    }
+
+    .select
+    {
+        width: 35%;
+        /*padding: .2rem 2rem .2rem 1rem;*/
         float: left;
-        text-align: right;
+    }
+
+    .taille button
+    {
+        float: right;
+    }
+
+    /* -- Tablette Liste Articles -- */
+
+    .fil_ariane
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /*Filtres aside*/
+
+    .conteneur_filtres
+    {
+        width: 80%;
+        margin: 4rem auto 2rem;
+    }
+
+    .filtres
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filtres .select
+    {
+        float: none;
+        width: 28%;
+        margin: 0;
+    }
+
+    .liste_articles article
+    {
+        width: 80%;
+        margin: 4rem auto;
+    }
+
+    .listing_banniere.banniere_categorie
+    {
+        display: block;
+        width: 80%;
+        margin: 0 auto 2rem;
+    }
+
+     /*-- Panier Tablette -- */
+
+    .article_description
+    {
+        margin: 3rem 0;
+    }
+
+    .article_contenu .prix
+    {
+        margin: 3rem 0;
+    }
+
+
+    .buttons_carousel
+    {
+        padding: 30% 10% 0;
+    }
+
+    .buttons_carousel i
+    {
+        /*font-size: 5rem;*/
+    }
+
+    /* -- footer -- */
+
+    .footer_container
+    {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 2%;
+    }
+
+    footer
+    {
+        background: #ededed;
+        font-family: Oswald, sans-serif;
+    }
+
+    .footer_block
+    {
+        width: 50%;
+        margin: 2% auto;
+        text-align: center;
+        font-size: 1.4em;
+        line-height: 26px;
+    }
+
+
+    .paiment
+    {
+        width: 80%;
+        margin: 0 auto;
+        padding: 3% 1%;
+    }
+
+    .paiment div
+    {
+        text-align: center;
+        width: 25%;
+        margin: 0 auto;
+        float: left;
+    }
+
+    .juridique
+    {
+        background: #d6d6d6;
+        width: 100%;
+        text-align: center;
+        padding: 4% 0 4% 0;
+        height: 100px;
+
+
+    }
+
+    .juridique p
+    {
+        font-size: 1.5em;
+        font-family: Oswald, sans-serif;
+        width: 33%;
+        margin: -8px auto;
+        float: left;
+    }
+
+}
+@media screen and (min-width: 770px)
+{
+
+     /*-- Desktop Navbar -- */
+
+    .burger
+    {
+        display: none;
+    }
+
+    header nav > ul
+    {
+        width: 80%;
+    }
+
+    .logo
+    {
+        display: inline-block;
+        width: 25%;
+        margin-right: 4.6%;
     }
 
     .link_desktop
     {
-        display: none;
+        display: inline-block;
+        width: 70%;
+        text-align: center;
     }
-}
 
+    .link_desktop ul
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 
-@media screen and (min-width: 768px)
-{
+    .link_desktop li
+    {
+        display: inline-block;
+        font-size: 1.5rem;
+        /*margin-right: 7%;*/
+    }
+
+    .link_desktop li:last-child
+    {
+        margin-right: 0;
+    }
+
+    .account
+    {
+        margin-right: 0;
+    }
+
+     /*-- Article Single Desktop --*/
 
     .article_single {
         display: flex;
@@ -369,6 +1141,11 @@ fieldset {
     }
 
     /* -- Page Article Single Desktop -- */
+
+    .banniere_categorie
+    {
+        display: none;
+    }
 
     .article_informations
     {
@@ -408,8 +1185,7 @@ fieldset {
 
     .select
     {
-        width: 15rem;
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 2%;
         float: none;
         margin-right: 5%;
     }
@@ -424,9 +1200,9 @@ fieldset {
     {
         float: none;
         display: inline-block;
+        width: 55%;
         vertical-align: top;
-        padding: 1rem 2rem;
-        width: 25rem;
+        padding: 1rem 2%;
     }
 
     .article_commande p
@@ -452,8 +1228,8 @@ fieldset {
 
     .article_commande input[type="submit"]
     {
-        width: 40.5rem;
-        padding: 1.5rem 9.3rem;
+        width: 88%;
+        padding: 1.5rem 9.3%;
     }
 
     .images_carousel img
@@ -461,86 +1237,337 @@ fieldset {
         max-height: 14rem;
     }
 
-    /*
-            NAV_BAR_DESKTOP
-     */
+    /* Nav bar desktop */
 
-    .mobile_nav ul li img
-    {
-        width: 20em;
-    }
-
-    .mobile_nav ul li a:first-child
-    {
-        width: 20%;
-    }
-
-    .link_desktop li a:first-child
-    {
-        width: 20%;
-    }
-
-    .link_desktop
-    {
-        display: block;
-        text-align: center;
-        font-family: Oswald, sans-serif;
-    }
-
-    .account
-    {
-        width: 10%;
-    }
     .burger img
     {
         display: none;
     }
 
-    /*
-        NAV_BAR_DESKTOP
- */
+     /*-- Desktop Page Liste Article -- */
 
-    .mobile_nav
+    .listing_banniere.banniere_categorie
     {
-        padding: 0 2.5rem;
+        display: none;
     }
 
-    .mobile_nav > ul
+    .fil_ariane
     {
-        width: 90%;
+        width: 100%;
+    }
+
+    .fil_ariane a
+    {
+        font-size: 1.6rem;
+    }
+
+    .fil_ariane li:after
+    {
+        margin: 0 1rem;
+    }
+
+    .conteneur_filtres
+    {
+        width: 20%;
         float: left;
     }
 
-    .mobile_nav ul li img
-    {
-        width: 20em;
-    }
-
-    .mobile_nav ul li a:first-child
-    {
-        font-size: 1.5rem;
-    }
-
-    .link_desktop li a:first-child
-    {
-        width: 20%;
-    }
-
-    .link_desktop
+    .filtres
     {
         display: block;
-        text-align: center;
-        font-family: Oswald, sans-serif;
     }
 
-    .account
+    .filtres .select
     {
-        text-align: right;
+        width: 80%;
+        margin: 2rem 0;
     }
-    .burger img
+
+    .filtres .select:first-child
+    {
+        margin-top: 0;
+    }
+
+    .filtres select
+    {
+        width: 50rem;
+        background: none;
+        border: none;
+    }
+
+    .liste_articles
+    {
+        display: flex;
+        float: left;
+        width: 80%;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+
+    .liste_articles article
+    {
+        width: 48%;
+        margin: 2rem auto;
+    }
+
+     /*-- Desktop page panier -- */
+
+    .panier_liste
+    {
+        float: left;
+        width: 59%;
+    }
+
+    .panier_total
+    {
+        float: right;
+        width: 40%;
+        margin-top: 8rem;
+    }
+
+    .article_contenu
+    {
+        width: 69%;
+    }
+    
+    .cross_selling 
+    {
+        clear: both;
+    }
+
+    .panier_liste figure
+    {
+        width: 30%;
+    }
+
+    .prix_description,
+    .quantite_enlever
+    {
+        width: 50%;
+        float: left;
+    }
+
+    .quantite_enlever
+    {
+        margin-top: 3.4rem;
+        text-align: center;
+    }
+
+    .article_contenu .quantite
+    {
+        text-align: center;
+    }
+
+    .article_contenu button
+    {
+        padding: 0;
+    }
+
+    .article_description
+    {
+        font-size: 1.4rem;
+    }
+
+    .button_commande span
+    {
+        font-size: 1.6rem;
+    }
+
+    .continue
+    {
+        margin: 5.5rem auto;
+    }
+
+    /*cross selling carousel*/
+    .groupe_articles
     {
         display: none;
     }
 
+    .groupe_visible
+    {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    .groupe_articles article
+    {
+        display: block;
+        width: 30%;
+    }
+
+    .buttons_carousel
+    {
+        padding: 15% 0 0;
+    }
+
+    /*
+        HOME
+     */
+
+    .categorie img
+    {
+        max-width: 100%;
+        transition: 0.2s;
+
+    }
+
+
+    .list_categorie
+    {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .list_categorie a
+    {
+        color: white;
+    }
+
+     /*-- Accueil Desktop -- */
+
+    .categorie
+    {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        font-family: Oswald, sans-serif;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .categorie h2
+    {
+        position: absolute;
+        width: 100%;
+        height: 30vh;
+        top: 37%;
+        left: 0;
+        transition: 0.2s;
+
+    }
+
+    .categorie:first-child, .categorie:nth-child(2)
+    {
+        width: 46%;
+        display: block;
+        float: left;
+        margin: 2%;
+    }
+
+    .categorie:nth-child(3)
+    {
+        height: 800px;
+        width: 36%;
+        display: block;
+        float: right;
+        margin: 2%;
+        overflow: hidden;
+    }
+
+    .categorie:nth-child(3) img
+    {
+        max-width: 170%;
+    }
+
+    .categorie:last-child, .categorie:nth-child(4)
+    {
+        width: 56%;
+        display: block;
+        float: left;
+        margin: 2%;
+    }
+
+    .categorie:hover h2
+    {
+        font-size: 2em;
+        transition: 0.2s;
+
+    }
+
+    .categorie:hover img
+    {
+        opacity: 0.6;
+        transition: 0.2s;
+    }
+
+     /*-- footer desktop -- */
+
+    .footer_container
+    {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 2%;
+    }
+
+    footer
+    {
+        background: #ededed;
+        font-family: Oswald, sans-serif;
+    }
+
+    .footer_block
+    {
+        width: 33%;
+        float: left;
+        text-align: center;
+        font-size: 1.4em;
+        line-height: 26px;
+    }
+
+
+    .paiment
+    {
+        width: 50%;
+        margin: 0 auto;
+        padding: 3% 1%;
+    }
+
+    .paiment div
+    {
+        text-align: right;
+
+        width: 25%;
+        margin: 0 auto;
+        float: left;
+    }
+
+    .juridique
+    {
+        background: #d6d6d6;
+        width: 100%;
+        text-align: center;
+        padding: 4% 0 4% 0;
+
+    }
+
+    .juridique p
+    {
+        font-size: 1.5em;
+        font-family: Oswald, sans-serif;
+        width: 33%;
+        margin: -8px auto;
+        float: left;
+    }
 }
+
+@media screen and (min-width: 950px)
+{
+    .link_desktop li
+    {
+        font-size: 1.7rem;
+        /*margin-right: 10%;*/
+    }
+
+    .liste_articles article
+    {
+        width: 30%;
+    }
+
+    .panier_total
+    {
+        max-width: 30rem;
+    }
+}
+
